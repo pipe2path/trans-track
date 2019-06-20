@@ -38,3 +38,8 @@ D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\trans-track.dll
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\trans-track.pdb
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\trans-track.csproj.CopyComplete
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\trans-track.csprojAssemblyReference.cache
+D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\ServiceHistory\Create.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\ServiceHistory\Delete.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\ServiceHistory\Details.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\ServiceHistory\Edit.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\ServiceHistory\Index.cshtml.g.cs
