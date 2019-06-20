@@ -1,0 +1,57 @@
+﻿@page
+@model trans_track.Pages.ServiceHistory.IndexModel
+
+<h1>All Services</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Service[0].Vehicle.License)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Service[0].ServiceType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Service[0].ServiceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Service[0].ServiceVendor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Service[0].Mileage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Service)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vehicle.License)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServiceType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServiceDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServiceVendor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mileage)
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-outline-primary" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
+                    <a class="btn btn-sm btn-outline-primary" asp-page="./Details" asp-route-id="@item.ID">Details</a>
+                    <a class="btn btn-sm btn-outline-primary" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </tr>
+        }
+    </tbody>
+</table>
