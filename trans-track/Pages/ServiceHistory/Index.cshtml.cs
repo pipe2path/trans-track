@@ -16,6 +16,7 @@ namespace trans_track.Pages.ServiceHistory
     {
         private readonly trans_track.Data.ApplicationDbContext _context;
 
+
         public IndexModel(trans_track.Data.ApplicationDbContext context)
         {
             _context = context;
