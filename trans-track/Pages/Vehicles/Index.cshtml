@@ -26,7 +26,7 @@
                 @Html.DisplayNameFor(model => model.Vehicle[0].License)
             </th>
             <th>
-                Cap
+                @Html.DisplayNameFor(model => model.Vehicle[0].Capacity)
             </th>
             <th></th>
         </tr>
@@ -34,28 +34,29 @@
     <tbody>
         @foreach (var item in Model.Vehicle)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Make)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Model)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Year)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.License)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Capacity)
-                </td>
-                <td>
-                    <a class="btn btn-sm btn-outline-primary" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
-                    <a class="btn btn-sm btn-outline-primary" asp-page="./Details" asp-route-id="@item.ID">Details</a>
-                    <a class="btn btn-sm btn-outline-primary" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.License)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacity)
+            </td>
+            <td class="break">
+                <a class="btn btn-sm btn-outline-primary" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a class="btn btn-sm btn-outline-primary" asp-page="/ServiceHistory/Create" asp-route-id="@item.ID">Add Service</a>
+                <a class="btn btn-sm btn-outline-primary" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
+                <a class="btn btn-sm btn-outline-primary" asp-page="./Details" asp-route-id="@item.ID">Details</a>
+            </td>
+        </tr>
         }
-    </tbody>
-</table>
+        </tbody>
+    </table>

@@ -43,3 +43,4 @@ D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\Service
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\ServiceHistory\Details.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\ServiceHistory\Edit.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\ServiceHistory\Index.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Areas\Identity\_ViewStart.cshtml.g.cs
