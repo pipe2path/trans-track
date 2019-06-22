@@ -23,10 +23,9 @@ html {
 }
 
 @media(max-width: 768px) {
-    /*tr {
+    tr {
         display: block;
-    }*/
-
+    }
     td.break {
         float: left;
         line-height: 22px;
