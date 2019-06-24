@@ -8,7 +8,6 @@ D:\code\vs\trans-track\trans-track\bin\Debug\netcoreapp2.2\trans-track.dll
 D:\code\vs\trans-track\trans-track\bin\Debug\netcoreapp2.2\trans-track.pdb
 D:\code\vs\trans-track\trans-track\bin\Debug\netcoreapp2.2\trans-track.Views.dll
 D:\code\vs\trans-track\trans-track\bin\Debug\netcoreapp2.2\trans-track.Views.pdb
-D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.csprojAssemblyReference.cache
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.csproj.CoreCompileInputs.cache
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.RazorAssemblyInfo.cache
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.RazorAssemblyInfo.cs
@@ -44,3 +43,4 @@ D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.Views.pdb
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.dll
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.pdb
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.csproj.CopyComplete
+D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\trans-track.csprojAssemblyReference.cache

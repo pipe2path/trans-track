@@ -60,8 +60,12 @@
         <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.PurchasedFrom)
         </dd>
+        <dd class="col-sm-5">
+            <img src="@Html.DisplayFor(m => m.Vehicle.ImagePath)" alt="Image" />
+        </dd>
         <dd class="col-sm-10">
         </dd>
+
     </dl>
     <dl class="row">
         <dt class="col-md-10" style="color:darkred">

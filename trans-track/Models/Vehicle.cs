@@ -42,6 +42,7 @@ namespace trans_track.Models
         [Display(Name = "Purchased From")]
         public string PurchasedFrom { get; set; }
 
+        public string ImagePath { get; set; }
         public string VehicleName
         {
             get { return Year + " " + Make + " " + Model + " - " + License; }

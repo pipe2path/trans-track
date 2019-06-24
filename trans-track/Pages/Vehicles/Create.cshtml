@@ -9,7 +9,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Vehicle.Make" class="control-label"></label>
@@ -55,6 +55,11 @@
                 <label asp-for="Vehicle.PurchasedFrom" class="control-label"></label>
                 <input asp-for="Vehicle.PurchasedFrom" class="form-control" />
                 <span asp-validation-for="Vehicle.PurchasedFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.ImagePath" class="control-label">Vehicle Image</label>
+                <input name="file" type="file" />
+                <span asp-validation-for="Vehicle.ImagePath" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

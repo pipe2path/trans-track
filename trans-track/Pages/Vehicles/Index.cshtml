@@ -1,9 +1,12 @@
 ﻿@page
 @model trans_track.Pages.Vehicle.IndexModel
 
+
 @{
     ViewData["Title"] = "Index";
 }
+
+<link rel="stylesheet" href="~/css/special.css" />
 
 <h1>Vehicles</h1>
 
@@ -34,7 +37,7 @@
     <tbody>
         @foreach (var item in Model.Vehicle)
         {
-        <tr>
+        <tr id="vehicleList">
             <td>
                 @Html.DisplayFor(modelItem => item.Make)
             </td>
