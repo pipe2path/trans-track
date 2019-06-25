@@ -44,7 +44,7 @@ namespace trans_track.Pages.ServiceHistory
                 _context.Service.Add(Service);
                 await _context.SaveChangesAsync();
 
-                return RedirectToPage("./Index");
+                return RedirectToPage("/Vehicles/Index");
             }
 
             PopulateVehicleNamesDropDownList(_context, emptyService.VehicleID);

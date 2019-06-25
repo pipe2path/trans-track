@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,10 +15,12 @@ namespace trans_track.Pages.Vehicle
     public class EditModel : PageModel
     {
         private readonly trans_track.Data.ApplicationDbContext _context;
+        private readonly ICommon _common;
 
-        public EditModel(trans_track.Data.ApplicationDbContext context)
+        public EditModel(trans_track.Data.ApplicationDbContext context, ICommon common)
         {
             _context = context;
+            _common = common;
         }
 
         [BindProperty]
@@ -39,7 +42,7 @@ namespace trans_track.Pages.Vehicle
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(IFormFile file)
         {
             if (!ModelState.IsValid)
             {
@@ -50,6 +53,9 @@ namespace trans_track.Pages.Vehicle
 
             try
             {
+                if (file != null && file.Length > 0)
+                    _common.UploadImage(Vehicle, file);
+                
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)

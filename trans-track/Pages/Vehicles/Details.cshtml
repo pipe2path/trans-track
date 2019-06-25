@@ -9,49 +9,49 @@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Vehicle.Make)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.Make)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Vehicle.Model)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.Model)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Vehicle.Year)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.Year)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Vehicle.Capacity)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.Capacity)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Vehicle.License)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.License)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Vehicle.VIN)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.VIN)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Vehicle.DatePurchased)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.DatePurchased)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Vehicle.PricePaid)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.PricePaid)
         </dd>
         <dt class="col-sm-2">
@@ -60,8 +60,10 @@
         <dd class="col-sm-2">
             @Html.DisplayFor(model => model.Vehicle.PurchasedFrom)
         </dd>
-        <dd class="col-sm-5">
-            <img src="@Html.DisplayFor(m => m.Vehicle.ImagePath)" alt="Image" />
+        <dd class="col-sm-10">
+        </dd>
+        <dd class="col-sm-8" id="vehicle_img">
+            <img src="@Html.DisplayFor(m => m.Vehicle.ImagePath)" alt="Image" width="300" height="200" />
         </dd>
         <dd class="col-sm-10">
         </dd>

@@ -24,6 +24,8 @@
     ".NETCoreApp,Version=v2.2": {
       "trans-track/1.0.0": {
         "dependencies": {
+          "AWSSDK.Core": "3.3.103.1",
+          "AWSSDK.S3": "3.3.102.18",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
@@ -33,6 +35,31 @@
         },
         "compile": {
           "trans-track.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.103.1": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.103.1"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.S3/3.3.102.18": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.103.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.102.18"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.S3.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -3537,6 +3564,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.3.103.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B++aF4hdAL6/ELU2+3GMOOgZSWAuax42l2hhMvHOvQu4GSMF10/ArLS6Wu5CM3dEAE+hT53sOPeFkIkVof5cjA==",
+      "path": "awssdk.core/3.3.103.1",
+      "hashPath": "awssdk.core.3.3.103.1.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.3.102.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vdmaj3Z5enjAMdrgtdP/yA4qN8l83ZJtLruRGduAoNAHN5rKOBfnVJJJO2N4lQC7ZjU+QV+5zAfO3Se/pN7+MA==",
+      "path": "awssdk.s3/3.3.102.18",
+      "hashPath": "awssdk.s3.3.3.102.18.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",

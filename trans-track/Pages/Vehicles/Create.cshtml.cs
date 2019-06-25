@@ -21,12 +21,12 @@ namespace trans_track.Pages.Vehicle
     public class CreateModel : PageModel
     {
         private readonly trans_track.Data.ApplicationDbContext _context;
-        private readonly IConfiguration _config;
+        private readonly ICommon _common;
         
-        public CreateModel(trans_track.Data.ApplicationDbContext context, IConfiguration config)
+        public CreateModel(trans_track.Data.ApplicationDbContext context, ICommon common)
         {
             _context = context;
-            _config = config;
+            _common = common;
         }
 
         public IActionResult OnGet()
@@ -43,34 +43,9 @@ namespace trans_track.Pages.Vehicle
             {
                 return Page();
             }
-
-            string bucketName = _config.GetSection("AWS").GetValue<string>("bucketName");
-            string awsAccessKeyId = _config.GetSection("AWS").GetValue<string>("accessKeyId");
-            string awsSecretAccessKey = _config.GetSection("AWS").GetValue<string>("secretAccessKey");
-            string keyName = Vehicle.License + ".jpg";
-
+            
             if (file != null && file.Length > 0)
-            {
-                using (var client = new AmazonS3Client(awsAccessKeyId, awsSecretAccessKey, RegionEndpoint.USWest2))
-                {
-                    using (var newMemoryStream = new MemoryStream())
-                    {
-                        file.CopyTo(newMemoryStream);
-                        var uploadRequest = new TransferUtilityUploadRequest
-                        {
-                            InputStream = newMemoryStream,
-                            Key = keyName,
-                            BucketName = bucketName,
-                            CannedACL = S3CannedACL.PublicRead
-                        };
-
-                        var fileTransferUtility = new TransferUtility(client);
-                        await fileTransferUtility.UploadAsync(uploadRequest);
-                    }
-
-                    Vehicle.ImagePath = _config.GetSection("AWS").GetValue<string>("imageBasePath") + "/" + keyName;
-                }
-            }
+                _common.UploadImage(Vehicle, file);
             
             _context.Vehicle.Add(Vehicle);
             await _context.SaveChangesAsync();
