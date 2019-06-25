@@ -19,7 +19,7 @@ namespace trans_track.Models
         [RegularExpression(@"^[0-9]+$")]
         public string Year { get; set; }
 
-        [Display(Name="Cap")]
+        [Display(Name="Capacity")]
         [RegularExpression(@"^[0-9]+$")]
         public string Capacity { get; set; }
 
