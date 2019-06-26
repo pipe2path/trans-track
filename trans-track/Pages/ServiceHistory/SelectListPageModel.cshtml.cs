@@ -8,8 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace trans_track.Pages.ServiceHistory
 {
-    public class VehicleNamePageModel : PageModel
+    public class SelectListPageModel : PageModel
     {
+        public SelectList ServiceTypeSL { get; set; }
         public SelectList VehicleNameSL { get; set; }
 
         public void PopulateVehicleNamesDropDownList(trans_track.Data.ApplicationDbContext _context,
@@ -20,6 +21,17 @@ namespace trans_track.Pages.ServiceHistory
                                 select v;
 
             VehicleNameSL = new SelectList(vehiclesQuery.AsNoTracking(), "ID", "VehicleName", selectedVehicle);
+
+        }
+
+        public void PopulateServiceTypeDropDownList(trans_track.Data.ApplicationDbContext _context,
+             object selectedServiceType = null)
+        {
+            var serviceTypeQuery = from t in _context.ServiceType
+                                   orderby t.Name
+                                   select t;
+
+            ServiceTypeSL = new SelectList(serviceTypeQuery.AsNoTracking(), "ID", "Name", selectedServiceType);
 
         }
     }

@@ -13,4 +13,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <Value>Server=translogistics.cnov3xgxiwbf.us-west-2.rds.amazonaws.com%3bDatabase=transLogisticsDB%3bUser Id=tl_admin%3bPassword=t1Adm1n1%3bMultipleActiveResultSets=true</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
+  <ItemGroup>
+    <File Include="Data/Migrations/20190626090353_ServiceType.cs">
+      <publishTime>06/26/2019 02:03:54</publishTime>
+    </File>
+    <File Include="Data/Migrations/20190626090353_ServiceType.Designer.cs">
+      <publishTime>06/26/2019 02:03:54</publishTime>
+    </File>
+  </ItemGroup>
 </Project>

@@ -26,6 +26,11 @@ D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceHi
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceHistory\Details.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceHistory\Edit.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceHistory\Index.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceType\Create.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceType\Delete.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceType\Details.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceType\Edit.cshtml.g.cs
+D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\ServiceType\Index.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_CookieConsentPartial.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_Layout.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs

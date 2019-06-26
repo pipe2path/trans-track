@@ -10,7 +10,7 @@ using trans_track.Models;
 
 namespace trans_track.Pages.ServiceHistory
 {
-    public class CreateModel : VehicleNamePageModel
+    public class CreateModel : SelectListPageModel
     {
         private readonly trans_track.Data.ApplicationDbContext _context;
 
@@ -22,6 +22,7 @@ namespace trans_track.Pages.ServiceHistory
         public IActionResult OnGet()
         {
             PopulateVehicleNamesDropDownList(_context);
+            PopulateServiceTypeDropDownList(_context);
             return Page();
         }
 
@@ -48,6 +49,7 @@ namespace trans_track.Pages.ServiceHistory
             }
 
             PopulateVehicleNamesDropDownList(_context, emptyService.VehicleID);
+                
             return Page();
         }
     }
