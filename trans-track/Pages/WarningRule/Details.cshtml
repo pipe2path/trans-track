@@ -1,0 +1,31 @@
+﻿@page
+@model trans_track.Pages.WarningRule.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>WarningRule</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WarningRule.ServiceTypeID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WarningRule.ServiceTypeID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WarningRule.RuleID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WarningRule.RuleID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.WarningRule.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

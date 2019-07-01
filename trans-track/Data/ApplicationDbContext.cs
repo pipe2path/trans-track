@@ -16,5 +16,8 @@ namespace trans_track.Data
         public DbSet<trans_track.Models.Vehicle> Vehicle { get; set; }
         public DbSet<trans_track.Models.Service> Service { get; set; }
         public DbSet<trans_track.Models.ServiceType> ServiceType { get; set; }
+        public DbSet<trans_track.Models.Warning> Warning { get; set; }
+        public DbSet<trans_track.Models.WarningRule> WarningRule { get; set; }
+        public DbSet<trans_track.Models.Rule> Rule { get; set; }
     }
 }

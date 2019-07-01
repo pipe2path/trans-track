@@ -48,6 +48,9 @@ namespace trans_track.Models
             get { return Year + " " + Make + " " + Model + " - " + License; }
         }
 
+        //public bool Warning { get; set; }
+        //public string WarningMessage { get; set; }
+
         public ICollection<Service> Services { get; set; }
     }
 }

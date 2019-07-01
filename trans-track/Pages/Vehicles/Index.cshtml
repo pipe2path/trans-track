@@ -1,11 +1,11 @@
 ﻿@page
-@model trans_track.Pages.Vehicle.IndexModel
-
+@model trans_track.Pages.Vehicles.IndexModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <link rel="stylesheet" href="~/css/special.css" />
 
 <h1>Vehicles</h1>
@@ -17,16 +17,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Vehicle[0].Make)
+                @Html.DisplayNameFor(model => model.Make)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Vehicle[0].Model)
+                @Html.DisplayNameFor(model => model.Model)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Vehicle[0].Year)
+                @Html.DisplayNameFor(model => model.Year)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Vehicle[0].License)
+                @Html.DisplayNameFor(model => model.License)
             </th>
             <th>
                 Cap
@@ -35,7 +35,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Vehicle)
+        @foreach (var item in Model.VehicleVM)
         {
         <tr id="vehicleList">
             <td>
@@ -53,14 +53,52 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Capacity)
             </td>
-            <td class="break">
-                <a class="btn btn-sm btn-outline-primary" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-                <a class="btn btn-sm btn-outline-primary" asp-page="/ServiceHistory/Create" asp-route-id="@item.ID">Add Service</a>
-                <a class="btn btn-sm btn-outline-primary" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
-                <a class="btn btn-sm btn-outline-primary" asp-page="./Details" asp-route-id="@item.ID">Details</a>
-            </td>
-            
+            @*<td>
+                @Html.DisplayFor(modelItem => item.WarningMessage)
+            </td>*@
+        <td class="break">
+            <a class="btn btn-sm btn-outline-primary" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            <a class="btn btn-sm btn-outline-primary" asp-page="/ServiceHistory/Create" asp-route-id="@item.ID">+ Service</a>
+            @*<a class="btn btn-sm btn-outline-primary" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>*@
+            <a class="btn btn-sm btn-outline-primary" asp-page="./Details" asp-route-id="@item.ID">Details</a>
+            @if (item.Warning == true)
+            {
+                <img id="warning" src="~/img/warning.jpg" onclick="showModal('@item.WarningMessage')" width="30" height="30" />
+            }
+        </td>
+
         </tr>
         }
         </tbody>
     </table>
+
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        console.log("document loaded");
+    });
+
+    function showModal(message) {
+        var modal = $("#alertModal");
+        modal.find('.modal-body p').text(message);
+        modal.find('.modal-header h5').html('Service Alert');
+        $('#alertModal').modal('show');
+    }
+</script>
+
+
+<div id="alertModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+        </div>
+    </div>
+</div>

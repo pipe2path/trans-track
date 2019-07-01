@@ -12,12 +12,12 @@ namespace trans_track.Models
         public int VehicleID { get; set; }
 
         [Display(Name = "Service Type")]
-        public string ServiceType { get; set; }
+        public int ServiceTypeID { get; set; }
 
         [Display(Name="Service Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}")]
-public DateTime ServiceDate { get; set; }
+        public DateTime ServiceDate { get; set; }
 
         [Display(Name = "Repaired At")]
         public string ServiceVendor { get; set; }
@@ -26,5 +26,6 @@ public DateTime ServiceDate { get; set; }
         public int Mileage { get; set; }
 
         public Vehicle Vehicle { get; set; }
+        public ServiceType ServiceType { get; set; }
     }
 }

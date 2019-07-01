@@ -28,10 +28,14 @@ namespace trans_track
 
         public void UploadImage(Vehicle vehicle, IFormFile file)
         {
-            string bucketName = _config.GetSection("AWS").GetValue<string>("bucketName");
-            string awsAccessKeyId = _config.GetSection("AWS").GetValue<string>("accessKeyId");
-            string awsSecretAccessKey = _config.GetSection("AWS").GetValue<string>("secretAccessKey");
+            //string bucketName = _config.GetSection("AWS").GetValue<string>("bucketName");
+            //string awsAccessKeyId = _config.GetSection("AWS").GetValue<string>("accessKeyId");
+            //string awsSecretAccessKey = _config.GetSection("AWS").GetValue<string>("secretAccessKey");
+            string bucketName = "trans-track-images";
+            string awsAccessKeyId = "AKIA52EKHXRHDXJ72DUG";
+            string awsSecretAccessKey = "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";
             string keyName = vehicle.License + ".jpg";
+            string imageBasePath = "https://trans-track-images.s3-us-west-2.amazonaws.com";
 
             if (file != null && file.Length > 0)
             {
@@ -52,10 +56,9 @@ namespace trans_track
                         fileTransferUtility.Upload(uploadRequest);
                     }
 
-                    vehicle.ImagePath = _config.GetSection("AWS").GetValue<string>("imageBasePath") + "/" + keyName;
+                    vehicle.ImagePath = imageBasePath + "/" + keyName;
                 }
             }
         }
     }
-
 }

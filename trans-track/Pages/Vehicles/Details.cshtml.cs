@@ -29,10 +29,10 @@ namespace trans_track.Pages.Vehicle
             }
 
             Vehicle = await _context.Vehicle
-                .Include(v => v.Services)
+                .Include(v => v.Services).ThenInclude(v => v.ServiceType)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
-
+            
             if (Vehicle == null)
             {
                 return NotFound();

@@ -184,6 +184,19 @@ namespace trans_track.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("trans_track.Models.Rule", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Rule");
+                });
+
             modelBuilder.Entity("trans_track.Models.Service", b =>
                 {
                     b.Property<int>("ID")
@@ -194,13 +207,15 @@ namespace trans_track.Data.Migrations
 
                     b.Property<DateTime>("ServiceDate");
 
-                    b.Property<string>("ServiceType");
+                    b.Property<int>("ServiceTypeID");
 
                     b.Property<string>("ServiceVendor");
 
                     b.Property<int>("VehicleID");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("ServiceTypeID");
 
                     b.HasIndex("VehicleID");
 
@@ -247,12 +262,44 @@ namespace trans_track.Data.Migrations
                     b.Property<string>("VIN")
                         .HasMaxLength(17);
 
+                    b.Property<bool>("Warning");
+
+                    b.Property<string>("WarningMessage");
+
                     b.Property<string>("Year")
                         .HasMaxLength(4);
 
                     b.HasKey("ID");
 
                     b.ToTable("Vehicle");
+                });
+
+            modelBuilder.Entity("trans_track.Models.Warning", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Message");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Warning");
+                });
+
+            modelBuilder.Entity("trans_track.Models.WarningRule", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("RuleID");
+
+                    b.Property<int>("ServiceTypeID");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("WarningRule");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -302,6 +349,11 @@ namespace trans_track.Data.Migrations
 
             modelBuilder.Entity("trans_track.Models.Service", b =>
                 {
+                    b.HasOne("trans_track.Models.ServiceType", "ServiceType")
+                        .WithMany()
+                        .HasForeignKey("ServiceTypeID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("trans_track.Models.Vehicle", "Vehicle")
                         .WithMany("Services")
                         .HasForeignKey("VehicleID")

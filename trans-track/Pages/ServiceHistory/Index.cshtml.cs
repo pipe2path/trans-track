@@ -21,12 +21,12 @@ namespace trans_track.Pages.ServiceHistory
         {
             _context = context;
         }
-
+        
         public IList<Service> Service { get;set; }
 
         public async Task OnGetAsync()
         {
-            Service = await _context.Service.Include(s => s.Vehicle).AsNoTracking().ToListAsync();
+            Service = await _context.Service.Include(s => s.Vehicle).Include(t => t.ServiceType).AsNoTracking().ToListAsync();
         }
     }
 }

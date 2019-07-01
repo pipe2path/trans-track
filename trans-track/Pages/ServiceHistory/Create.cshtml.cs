@@ -40,7 +40,7 @@ namespace trans_track.Pages.ServiceHistory
             if (await TryUpdateModelAsync<Service>(
                 emptyService,
                 "service",
-                s => s.ID, s => s.VehicleID, s => s.ServiceType, s => s.ServiceDate, s => s.ServiceVendor, s => s.Mileage))
+                s => s.ID, s => s.VehicleID, s => s.ServiceTypeID, s => s.ServiceDate, s => s.ServiceVendor, s => s.Mileage))
             {
                 _context.Service.Add(Service);
                 await _context.SaveChangesAsync();
