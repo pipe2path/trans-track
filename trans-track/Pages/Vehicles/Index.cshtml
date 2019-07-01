@@ -58,12 +58,12 @@
             </td>*@
         <td class="break">
             <a class="btn btn-sm btn-outline-primary" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            <a class="btn btn-sm btn-outline-primary" asp-page="/ServiceHistory/Create" asp-route-id="@item.ID">+ Service</a>
+            <a class="btn btn-sm btn-outline-primary" asp-page="/ServiceHistory/Create" asp-route-id="@item.ID">Add Service</a>
             @*<a class="btn btn-sm btn-outline-primary" asp-page="./Edit" asp-route-id="@item.ID">Edit</a>*@
             <a class="btn btn-sm btn-outline-primary" asp-page="./Details" asp-route-id="@item.ID">Details</a>
             @if (item.Warning == true)
             {
-                <img id="warning" src="~/img/warning.jpg" onclick="showModal('@item.WarningMessage')" width="30" height="30" />
+                <img id="warning" src="~/img/warning.jpg" onclick="showModal('@item.WarningMessage')" width="30" height="30" style="margin-left:10px"/>
             }
         </td>
 
