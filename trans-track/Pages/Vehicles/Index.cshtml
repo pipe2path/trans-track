@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <link rel="stylesheet" href="~/css/special.css" />
 
 <h1>Vehicles</h1>
@@ -28,9 +28,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.License)
             </th>
-            <th>
+            @*<th>
                 Cap
-            </th>
+            </th>*@
             <th></th>
         </tr>
     </thead>
@@ -50,11 +50,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.License)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Capacity)
-            </td>
             @*<td>
-                @Html.DisplayFor(modelItem => item.WarningMessage)
+                @Html.DisplayFor(modelItem => item.Capacity)
+            </td>*@@*<td>
+                @Html.DisplayFor(modelItem => item.Capacity)
             </td>*@
         <td class="break">
             <a class="btn btn-sm btn-outline-primary" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
