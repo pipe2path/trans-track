@@ -18,7 +18,6 @@ D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\trans-track.TagHelp
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\trans-track.RazorCoreGenerate.cache
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\Error.cshtml.g.cs
-D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\Index.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\Privacy.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\Shared\_CookieConsentPartial.cshtml.g.cs
 D:\code\vs\trans-track\trans-track\obj\Release\netcoreapp2.2\Razor\Pages\Shared\_Layout.cshtml.g.cs

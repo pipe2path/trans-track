@@ -86,20 +86,20 @@
                 <tbody>
                     @foreach (var item in Model.Vehicle.Services)
                     {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ServiceType.Name)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ServiceDate)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ServiceVendor)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Mileage)
-                            </td>
-                        </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ServiceType.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ServiceDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ServiceVendor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Mileage)
+                        </td>
+                    </tr>
                     }
                 </tbody>
             </table>
